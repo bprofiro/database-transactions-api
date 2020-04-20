@@ -3,7 +3,7 @@
  </div>
  
 <h3 align="center">
-  Challenge 02: First Node.js project with database
+  Challenge 03: First Node.js project with database
 </h3>
 
 
