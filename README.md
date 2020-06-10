@@ -3,7 +3,7 @@
  </div>
  
 <h3 align="center">
-  Challenge 03: First Node.js project with database
+  API de Transações Bancárias com Node.JS com Banco de Dados
 </h3>
 
 
@@ -12,9 +12,11 @@
 </p>
 
 <div>
-  <h2> :rocket: About the challenge: </h2>
+  <h2> :rocket: Rotas da API: </h2>
   
   - **`POST /transactions`**: The route must receive title, value, type, and category within the body of the request, the type being the type of the transaction, which should be income for incoming (deposits) and outcome for outgoing (withdrawn). When registering a new transaction, it must be stored within your database, having the fields id, title, value, type, category_id, created_at, updated_at.
+  
+A rota deve receber `title`, `value`, `type` e `category` no corpo da solicitação, sendo o `type` o tipo de transação, que deve ser a `income` de entrada (depósitos) e o `outcome` de saída (retirada). Ao registrar uma nova transação, ela deve ser armazenada em seu banco de dados, possuindo os campos `id`, `title`, `valor`, `value`, `category_id`, `created_at`, `updated_at`.
 
 ```json
 {
@@ -26,7 +28,7 @@
 }
 ```
 
-- **`GET /transactions`**: This route will return a listing with all the transactions you have registered so far, along with the sum of the entries, withdrawals and total credit. This route must return an object with the following format:
+- **`GET /transactions`**: Essa rota retornará uma listagem com todas as transações que você registrou até o momento, juntamente com a soma das entradas, saques e crédito total. Essa rota deve retornar um objeto com o seguinte formato:
 
 ```json
 {
@@ -80,17 +82,14 @@
 }
 ```
 
-- **`DELETE /transactions/:id`**: The route will delete a transaction with the `id` present in the route parameters;
+- **`DELETE /transactions/:id`**: A rota excluirá uma transação com o `id` presente nos parâmetros da rota;
 
-* **`POST /transactions/import`**: The route will allow the import of a file in `.csv` format containing the same information needed to create a transaction` id`, `title`,` value`, `type`,` category_id`, `created_at`,` updated_at `, where each line of the CSV file must be a new record for the database, and finally return all the` transactions` that have been imported into your database. The csv file, must follow the following [model] (./ assets / file.csv)
+* **`POST /transactions/import`**: A rota permitirá a importação de um arquivo no formato `.csv` contendo as mesmas informações necessárias para criar uma transação` id`, `title`,` value`, `type`,` category_id`, `created_at`,` created_at`, `updated_at `, onde cada linha do arquivo CSV deve ser um novo registro para o banco de dados e, finalmente, retornar todas as` transações` que foram importadas para o seu banco de dados. O arquivo csv, deve seguir o seguinte [modelo] (./ assets / file.csv)
 
 
 </div>
 
 <div>
-  <h2> :computer: Techs: </h2>
-   <p> This project was built in just one language: JavaScript, using the following technologies:
-
-   -   [Node.js](https://nodejs.org/en/)
-  </p>
+  <h2> :computer: Tecnologias: </h2>
+  <p> Esse projeto foi construído em Node.js e o seu banco de dados é o Postgres, mas pode ser utilizado para outros bancos. Ao clonar o projeto para usar, altere os campos necessários no arquivo `ormconfig.json` com o banco de dados que você deseja e os dados de acesso que o correspondem.</p>
 </div>
