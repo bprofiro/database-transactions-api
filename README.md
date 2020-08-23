@@ -14,9 +14,7 @@
 <div>
   <h2> :rocket: Rotas da API: </h2>
   
-  - **`POST /transactions`**: The route must receive title, value, type, and category within the body of the request, the type being the type of the transaction, which should be income for incoming (deposits) and outcome for outgoing (withdrawn). When registering a new transaction, it must be stored within your database, having the fields id, title, value, type, category_id, created_at, updated_at.
-  
-A rota deve receber `title`, `value`, `type` e `category` no corpo da solicitação, sendo o `type` o tipo de transação, que deve ser a `income` de entrada (depósitos) e o `outcome` de saída (retirada). Ao registrar uma nova transação, ela deve ser armazenada em seu banco de dados, possuindo os campos `id`, `title`, `valor`, `value`, `category_id`, `created_at`, `updated_at`.
+  - **`POST /transactions`**: A rota deve receber `title`, `value`, `type` e `category` no corpo da solicitação, sendo o `type` o tipo de transação, que deve ser a `income` de entrada (depósitos) e o `outcome` de saída (retirada). Ao registrar uma nova transação, ela deve ser armazenada em seu banco de dados, possuindo os campos `id`, `title`, `valor`, `value`, `category_id`, `created_at`, `updated_at`.
 
 ```json
 {
